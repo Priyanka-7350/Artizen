@@ -1,0 +1,81 @@
+{
+  "theme": "light",
+  "archetype": "Organic & Earthy + Pastel Soft",
+  "typography": {
+    "headings": {
+      "family": "DM Serif Display",
+      "weights": ["400"],
+      "usage": "H1, H2, H3, large display text. Apply tracking-tight or tracking-tighter."
+    },
+    "body": {
+      "family": "Poppins",
+      "weights": ["300", "400", "500"],
+      "usage": "Paragraphs, labels, button text, small details. Left-align dense content."
+    }
+  },
+  "colors": {
+    "background": "#F9F6F0",
+    "surface": "#F1EDE4",
+    "text": {
+      "primary": "#2C302E",
+      "secondary": "#5C635F",
+      "accent": "#E07A5F"
+    },
+    "brand": {
+      "sage_green": "#A3B18A",
+      "dusty_rose": "#E5B8B7",
+      "terracotta": "#E07A5F",
+      "golden_yellow": "#F4D06F",
+      "warm_cream": "#F9F6F0"
+    }
+  },
+  "layout": {
+    "spacing": "Generous. Use p-8, p-16, p-24, p-32. Minimal use of rigid borders. Let whitespace frame the content.",
+    "containers": "Organic layouts. Use Tetris Grid (Mode A) for experiences and masonry for the gallery.",
+    "border_radius": "rounded-2xl or rounded-3xl for images and cards. rounded-full for buttons."
+  },
+  "motion": {
+    "scroll": "Smooth scrolling is mandatory (e.g., using Framer Motion or similar scroll utilities).",
+    "animations": "Subtle parallax on images. Staggered fade-up for list items/menu. Scale-up on image hover."
+  },
+  "components": {
+    "navigation": "Sticky, glassmorphism (backdrop-blur-md bg-[#F9F6F0]/80), logo as text (DM Serif Display), subtle hover color shift on links.",
+    "hero": "100vh height. Background image object-cover. Subtle dark gradient overlay ONLY at bottom/top for text contrast (max bg-black/40). Massive H1 heading.",
+    "experiences": "4 cards. Use Tetris Grid (asymmetrical) with overlapping elements.",
+    "menu": "Elegant typographic layout. Clean text lists with dotted leaders or delicate separators. No heavy cards.",
+    "gallery": "Masonry grid of cafe photos and close-ups.",
+    "footer": "Large padding (py-32). Huge logo text 'Artizen'. Sage green or deep olive background."
+  },
+  "media": {
+    "hero": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/a47afbc5-59ad-4fa3-98cf-3b506c6040c0/images/4883473fd5b6f0e110df1c88d2deb6f281df43dc09ce9210849298702f45ff76.png",
+      "description": "Full-screen hero background. Wide-angle bright sunlit cafe interior."
+    },
+    "experiences": {
+      "date_night": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/a47afbc5-59ad-4fa3-98cf-3b506c6040c0/images/28e5865fccd7bd753fad711e03024c8db64c2ed2d49226115d6af3461248a2d0.png",
+        "description": "Romantic couple painting at cafe table."
+      },
+      "friends": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/a47afbc5-59ad-4fa3-98cf-3b506c6040c0/images/2ee6a61e1de37e78cf33f41a81b919130dd7c1815edfd7d9335dbc3dac25afb3.png",
+        "description": "Group of friends painting in cafe."
+      },
+      "chill_time": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/a47afbc5-59ad-4fa3-98cf-3b506c6040c0/images/eb40021aee861af2adfd247488f217caba697e3dc678ee1d38ead33e11b749f2.png",
+        "description": "Close up coffee and paint palette."
+      },
+      "painting_session": {
+        "url": "https://images.unsplash.com/photo-1753791271805-0dc8add665e5",
+        "description": "Sunny rustic setting to represent painting sessions."
+      }
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1761728719776-2e20fde6ea8c",
+      "https://images.unsplash.com/photo-1681477701208-f5233e9dcd45",
+      "https://images.pexels.com/photos/19758894/pexels-photo-19758894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "https://images.unsplash.com/photo-1774521044355-508615f287ca"
+    ]
+  },
+  "testing": "All interactive elements (links, buttons, form inputs) must have data-testid attributes.",
+  "instructions_to_main_agent": "Build a React single page application with anchor navigation. Implement smooth scrolling. Use raw HTML/Tailwind for layout sections (marketing style), avoid Shadcn for large structural components. Ensure generous spacing, editorial feel, and strict adherence to the typography pairing (DM Serif Display + Poppins). Add fonts from Google Fonts in index.html or App.css. Do not add any placeholder images; rely strictly on the media URLs provided here. Build the tetris bento grid and masonry gallery as per instructions."
+}
