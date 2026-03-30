@@ -1,13 +1,15 @@
 import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
+const UP = 'https://customer-assets.emergentagent.com/job_artizen-canvas/artifacts/';
+const GH = 'https://raw.githubusercontent.com/Priyanka-7350/Artizen-Website/main/';
+
 const reviews = [
   {
     id: 1,
     name: 'Riya Sharma',
-    role: 'Visited for Date Night',
-    initials: 'RS',
-    color: '#E5B8B7',
+    role: 'Date Night Visit',
+    photo: `${GH}655943747_17988473345957189_7670786767594726046_n.jpg`,
     rating: 5,
     text: "Came for a date night and left with a masterpiece and memories. The vibe is absolutely unreal — warm, cozy, and perfectly artistic. We're already planning our next visit!",
   },
@@ -15,8 +17,7 @@ const reviews = [
     id: 2,
     name: 'Aarav Mehta',
     role: 'Friends Outing',
-    initials: 'AM',
-    color: '#F4D06F',
+    photo: `${UP}nyi2n85w_651074300_17987449343957189_8356130856163082839_n.jpg`,
     rating: 5,
     text: 'Best birthday surprise idea ever! My friends loved the painting session so much. The coffee is top-notch and the staff made the whole experience so special.',
   },
@@ -24,8 +25,7 @@ const reviews = [
     id: 3,
     name: 'Priya Kulkarni',
     role: 'Weekly Regular',
-    initials: 'PK',
-    color: '#A3B18A',
+    photo: `${UP}5jvjr4jl_650305993_17987449382957189_7978341390699930889_n.jpg`,
     rating: 5,
     text: 'This place is pure magic. I go every Sunday for the art brunch and it has become my ritual. Something about painting while eating good food and sipping chai just resets my soul.',
   },
@@ -33,8 +33,7 @@ const reviews = [
     id: 4,
     name: 'Sahil Desai',
     role: 'First-time Visitor',
-    initials: 'SD',
-    color: '#E07A5F',
+    photo: `${UP}9hwjvrta_651011976_17987449445957189_4522402988618780881_n.jpg`,
     rating: 5,
     text: 'Finally a café that does something truly unique. The ambiance is Instagram-worthy, the food is delicious, and the painting sessions are genuinely fun for non-artists like me.',
   },
@@ -42,8 +41,7 @@ const reviews = [
     id: 5,
     name: 'Ananya Rao',
     role: 'Solo Session',
-    initials: 'AR',
-    color: '#A3B18A',
+    photo: `${UP}7ebgxfwl_650990055_17987449391957189_5869847284198424935_n.jpg`,
     rating: 5,
     text: "Took a solo painting session and it was the most therapeutic afternoon I've had in months. Just me, my canvas, a latte, and the most beautiful playlist. 10/10.",
   },
@@ -84,48 +82,51 @@ const Testimonials = () => {
     <section
       id="reviews"
       data-testid="testimonials-section"
-      className="py-24 md:py-32 bg-[#F1EDE4] overflow-hidden"
+      className="py-20 md:py-32 bg-[#F1EDE4] overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto px-6 lg:px-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Heading */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10 md:mb-14">
           <span className="scroll-reveal section-label block mb-3">Voices from the Canvas</span>
-          <h2 className="scroll-reveal delay-1 font-['DM_Serif_Display'] text-[2.8rem] md:text-5xl text-[#2C302E] leading-tight">
+          <h2 className="scroll-reveal delay-1 font-['DM_Serif_Display'] text-4xl md:text-5xl text-[#2C302E] leading-tight">
             What Our Artists Say
           </h2>
         </div>
 
-        {/* Carousel */}
+        {/* Carousel card */}
         <div
           data-testid="testimonial-carousel"
-          className="scroll-reveal delay-2 relative bg-[#F9F6F0] rounded-3xl p-8 md:p-12 shadow-sm"
+          className="scroll-reveal delay-2 relative bg-[#F9F6F0] rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-12 shadow-sm"
         >
-          {/* Giant quote mark */}
+          {/* Big decorative quote */}
           <div
-            className="absolute top-6 left-8 font-['DM_Serif_Display'] text-9xl leading-none pointer-events-none select-none"
-            style={{ color: '#E07A5F', opacity: 0.12 }}
+            className="absolute top-4 left-6 font-['DM_Serif_Display'] leading-none pointer-events-none select-none"
+            style={{ fontSize: 'clamp(5rem,12vw,7rem)', color: '#E07A5F', opacity: 0.1 }}
             aria-hidden="true"
           >
             "
           </div>
 
-          {/* Review content */}
+          {/* Content */}
           <div
             className="relative z-10"
             style={{ opacity: isAnimating ? 0 : 1, transition: 'opacity 0.3s ease' }}
           >
             <StarRating count={review.rating} />
 
-            <blockquote className="font-['DM_Serif_Display'] italic text-xl md:text-2xl text-[#2C302E] leading-relaxed mt-5 mb-7">
+            <blockquote className="font-['DM_Serif_Display'] italic text-lg sm:text-xl md:text-2xl text-[#2C302E] leading-relaxed mt-4 mb-6 md:mb-8">
               "{review.text}"
             </blockquote>
 
-            <div className="flex items-center gap-3">
-              <div
-                className="w-11 h-11 rounded-full flex items-center justify-center font-['Poppins'] font-semibold text-sm text-[#2C302E]"
-                style={{ backgroundColor: review.color }}
-              >
-                {review.initials}
+            {/* Reviewer — photo + name */}
+            <div className="flex items-center gap-3 sm:gap-4">
+              {/* 1:1 customer photo */}
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shrink-0 border-2 border-[#E2D9CE]">
+                <img
+                  src={review.photo}
+                  alt={review.name}
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
               <div>
                 <p className="font-['Poppins'] font-medium text-sm text-[#2C302E]">{review.name}</p>
@@ -134,39 +135,37 @@ const Testimonials = () => {
             </div>
           </div>
 
-          {/* Navigation arrows */}
-          <div className="absolute bottom-8 right-8 flex gap-2">
+          {/* Arrows */}
+          <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 flex gap-2">
             <button
               onClick={() => navigate(-1)}
               data-testid="testimonial-prev"
               aria-label="Previous review"
-              className="w-10 h-10 rounded-full border border-[#E2D9CE] flex items-center justify-center text-[#5C635F] hover:bg-[#E07A5F] hover:text-white hover:border-[#E07A5F] transition-all duration-300"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#E2D9CE] flex items-center justify-center text-[#5C635F] hover:bg-[#E07A5F] hover:text-white hover:border-[#E07A5F] transition-all duration-300"
             >
-              <ChevronLeft size={16} />
+              <ChevronLeft size={15} />
             </button>
             <button
               onClick={() => navigate(1)}
               data-testid="testimonial-next"
               aria-label="Next review"
-              className="w-10 h-10 rounded-full border border-[#E2D9CE] flex items-center justify-center text-[#5C635F] hover:bg-[#E07A5F] hover:text-white hover:border-[#E07A5F] transition-all duration-300"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#E2D9CE] flex items-center justify-center text-[#5C635F] hover:bg-[#E07A5F] hover:text-white hover:border-[#E07A5F] transition-all duration-300"
             >
-              <ChevronRight size={16} />
+              <ChevronRight size={15} />
             </button>
           </div>
         </div>
 
         {/* Dot indicators */}
-        <div className="flex justify-center gap-2 mt-6">
+        <div className="flex justify-center gap-2 mt-5">
           {reviews.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
               data-testid={`testimonial-dot-${i}`}
-              aria-label={`Go to review ${i + 1}`}
+              aria-label={`Review ${i + 1}`}
               className={`h-1.5 rounded-full transition-all duration-400 ${
-                i === current
-                  ? 'w-6 bg-[#E07A5F]'
-                  : 'w-1.5 bg-[#E2D9CE] hover:bg-[#A3B18A]'
+                i === current ? 'w-6 bg-[#E07A5F]' : 'w-1.5 bg-[#E2D9CE] hover:bg-[#A3B18A]'
               }`}
             />
           ))}

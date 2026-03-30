@@ -1,42 +1,30 @@
 import { ZoomIn } from 'lucide-react';
 
+const GH = 'https://raw.githubusercontent.com/Priyanka-7350/Artizen-Website/main/';
+const UP = 'https://customer-assets.emergentagent.com/job_artizen-canvas/artifacts/';
+
 const galleryImages = [
-  {
-    url: 'https://images.unsplash.com/photo-1761728719776-2e20fde6ea8c?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85',
-    alt: 'Creative café moment',
-  },
-  {
-    url: 'https://images.pexels.com/photos/4709865/pexels-photo-4709865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    alt: 'Watercolor painting in progress',
-  },
-  {
-    url: 'https://images.pexels.com/photos/17368121/pexels-photo-17368121.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    alt: 'Art café interior',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1681477701208-f5233e9dcd45?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85',
-    alt: 'Painting session at Artizen',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1770546025492-cbbd01700768?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85',
-    alt: 'Artisan latte art',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1767528401646-950a1f1186f4?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85',
-    alt: 'Colourful artwork on café wall',
-  },
-  {
-    url: 'https://images.pexels.com/photos/19758894/pexels-photo-19758894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    alt: 'Café atmosphere',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1687286183607-7c5cd416e50d?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85',
-    alt: 'Artist paint brushes',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1774521044355-508615f287ca?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85',
-    alt: 'Creative studio session',
-  },
+  // Uploaded real café customer images
+  { url: `${UP}nyi2n85w_651074300_17987449343957189_8356130856163082839_n.jpg`, alt: 'Friends with paintings at Artizen' },
+  { url: `${UP}5jvjr4jl_650305993_17987449382957189_7978341390699930889_n.jpg`, alt: 'Painting outdoors at Artizen' },
+  { url: `${UP}bu968c51_650750727_17987449418957189_936890723416456691_n.jpg`, alt: 'Group session overhead view' },
+  { url: `${UP}7ebgxfwl_650990055_17987449391957189_5869847284198424935_n.jpg`, alt: 'Two artists at Artizen Café' },
+  { url: `${UP}9hwjvrta_651011976_17987449445957189_4522402988618780881_n.jpg`, alt: 'Painting session in progress' },
+
+  // GitHub real café images
+  { url: `${GH}651133878_17987449409957189_8254288634157859052_n.jpg`, alt: 'Artizen Café moment' },
+  { url: `${GH}652252096_17987449352957189_6171440808765095993_n.jpg`, alt: 'Creative session at Artizen' },
+  { url: `${GH}654911069_17988473393957189_4833772707850184219_n.jpg`, alt: 'Art café atmosphere' },
+  { url: `${GH}655101581_17988473372957189_2300121547585468406_n.jpg`, alt: 'Painting in progress' },
+  { url: `${GH}655345934_17988473369957189_8950525848806477298_n.jpg`, alt: 'Artizen Café experience' },
+  { url: `${GH}655591471_18314161882281189_1695804068024884694_n.jpg`, alt: 'Creative art moment' },
+  { url: `${GH}655650161_17989326449957189_3152244345571613120_n.jpg`, alt: 'Artizen session' },
+  { url: `${GH}655683715_17989326509957189_8219164673699429152_n.jpg`, alt: 'Canvas and brushes' },
+  { url: `${GH}655852876_17988473402957189_4267218922830974246_n.jpg`, alt: 'Art café vibe' },
+  { url: `${GH}655930560_17988473336957189_4740933777782272394_n.jpg`, alt: 'Creative workshop' },
+  { url: `${GH}655943747_17988473345957189_7670786767594726046_n.jpg`, alt: 'Artizen moment' },
+  { url: `${GH}656015921_17989456736957189_1543319552785002958_n.jpg`, alt: 'Painting session' },
+  { url: `${GH}656025650_17988473411957189_6732360852035598378_n.jpg`, alt: 'Café art experience' },
 ];
 
 const Gallery = () => {
@@ -44,14 +32,14 @@ const Gallery = () => {
     <section
       id="gallery"
       data-testid="gallery-section"
-      className="py-24 md:py-32 bg-[#F1EDE4]"
+      className="py-20 md:py-32 bg-[#F1EDE4]"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Heading */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-12 gap-4">
           <div>
             <span className="scroll-reveal section-label block mb-3">Our World</span>
-            <h2 className="scroll-reveal delay-1 font-['DM_Serif_Display'] text-[2.8rem] md:text-5xl text-[#2C302E] leading-tight">
+            <h2 className="scroll-reveal delay-1 font-['DM_Serif_Display'] text-4xl md:text-5xl text-[#2C302E] leading-tight">
               Moments in Colour
             </h2>
           </div>
@@ -66,7 +54,7 @@ const Gallery = () => {
             <div
               key={index}
               data-testid={`gallery-item-${index}`}
-              className="masonry-item relative overflow-hidden rounded-2xl group cursor-pointer"
+              className="masonry-item relative overflow-hidden rounded-xl md:rounded-2xl group cursor-pointer"
             >
               <img
                 src={img.url}
@@ -74,10 +62,9 @@ const Gallery = () => {
                 className="w-full block transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-[#E07A5F]/0 group-hover:bg-[#E07A5F]/25 transition-all duration-400 flex items-center justify-center">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
-                  <ZoomIn className="text-white" size={20} />
+              <div className="absolute inset-0 bg-[#E07A5F]/0 group-hover:bg-[#E07A5F]/20 transition-all duration-500 flex items-center justify-center">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-2.5">
+                  <ZoomIn className="text-white" size={18} />
                 </div>
               </div>
             </div>
@@ -85,7 +72,7 @@ const Gallery = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-10 md:mt-12">
           <a
             href="https://www.instagram.com"
             target="_blank"

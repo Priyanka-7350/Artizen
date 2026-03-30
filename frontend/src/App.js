@@ -6,8 +6,10 @@ import About from './components/About';
 import Experiences from './components/Experiences';
 import Menu from './components/Menu';
 import Gallery from './components/Gallery';
+import ReelsSection from './components/ReelsSection';
 import Events from './components/Events';
 import Testimonials from './components/Testimonials';
+import ReadyToPaintBanner from './components/ReadyToPaintBanner';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -21,7 +23,7 @@ function App() {
           }
         });
       },
-      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.06, rootMargin: '0px 0px -30px 0px' }
     );
 
     const elements = document.querySelectorAll('.scroll-reveal, .scale-reveal');
@@ -39,8 +41,10 @@ function App() {
         <Experiences />
         <Menu />
         <Gallery />
+        <ReelsSection />
         <Events />
         <Testimonials />
+        <ReadyToPaintBanner />
         <Contact />
       </main>
       <Footer />

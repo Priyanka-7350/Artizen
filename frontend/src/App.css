@@ -228,6 +228,37 @@ body {
 }
 
 /* ========================================
+   REELS HORIZONTAL SCROLL
+   ======================================== */
+
+.reels-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.reels-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.reels-scroll::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-radius: 2px;
+}
+
+.reels-scroll::-webkit-scrollbar-thumb {
+  background: var(--terracotta);
+  border-radius: 2px;
+}
+
+/* ========================================
+   HIDE EMERGENT BADGE (Pro plan)
+   ======================================== */
+
+#emergent-badge {
+  display: none !important;
+}
+
+/* ========================================
    SHIMMER PLACEHOLDER
    ======================================== */
 

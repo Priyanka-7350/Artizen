@@ -155,22 +155,6 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-
-            {/* Booking prompt */}
-            <div className="scroll-reveal delay-5 mt-8 bg-[#2C302E] rounded-2xl p-6 text-white">
-              <h3 className="font-['DM_Serif_Display'] text-2xl mb-2">Ready to Paint?</h3>
-              <p className="font-['Poppins'] font-light text-sm text-white/75 mb-4 leading-relaxed">
-                Call us or drop a message to reserve your canvas. Walk-ins welcome based on availability.
-              </p>
-              <a
-                href="tel:+919876543210"
-                data-testid="call-now-btn"
-                className="inline-flex items-center gap-2 font-['Poppins'] text-sm font-medium bg-[#E07A5F] text-white px-5 py-2.5 rounded-full hover:bg-[#c8694f] transition-colors duration-300"
-              >
-                <Phone size={13} />
-                Call Now
-              </a>
-            </div>
           </div>
         </div>
       </div>
