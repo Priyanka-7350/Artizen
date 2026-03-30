@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Artizen/static/css/main.ddfef5a3.css",
+    "main.js": "/Artizen/static/js/main.0d0563f6.js",
+    "index.html": "/Artizen/index.html",
+    "main.ddfef5a3.css.map": "/Artizen/static/css/main.ddfef5a3.css.map",
+    "main.0d0563f6.js.map": "/Artizen/static/js/main.0d0563f6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddfef5a3.css",
+    "static/js/main.0d0563f6.js"
+  ]
+}
