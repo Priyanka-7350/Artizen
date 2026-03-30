@@ -17,7 +17,7 @@ const slides = [
   {
     id: 2,
     image:
-      '/images/slide1.jpg',
+      '/Images/slide1.jpg',
     eyebrow: 'Where Pune Creates',
     lines: ['Every Session', 'Is a Story'],
     sub: "Join hundreds of people who've discovered their inner artist at Artizen. No experience needed.",
@@ -29,7 +29,7 @@ const slides = [
   {
     id: 3,
     image:
-      '/images/slide2.jpg',
+      '/Images/slide2.jpg',
     eyebrow: 'Art Is More Fun Together',
     lines: ['Paint. Laugh.', 'Remember.'],
     sub: 'Bring your friends, your partner, or just yourself. Every visit becomes a memory worth keeping.',
@@ -41,7 +41,7 @@ const slides = [
   {
     id: 4,
     image:
-      '/images/slide3.jpg',
+      '/Images/slide3.jpg',
     eyebrow: 'Find Your Creative Rhythm',
     lines: ['Unplug.', 'Paint. Be Present.'],
     sub: 'Step away from the screen and into a world of colour. Artizen is your creative sanctuary in Pune.',
