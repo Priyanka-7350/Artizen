@@ -17,7 +17,7 @@ const slides = [
   {
     id: 2,
     image:
-      'https://customer-assets.emergentagent.com/job_artizen-canvas/artifacts/bu968c51_650750727_17987449418957189_936890723416456691_n.jpg',
+      '/images/slide1.jpg',
     eyebrow: 'Where Pune Creates',
     lines: ['Every Session', 'Is a Story'],
     sub: "Join hundreds of people who've discovered their inner artist at Artizen. No experience needed.",
@@ -29,7 +29,7 @@ const slides = [
   {
     id: 3,
     image:
-      'https://customer-assets.emergentagent.com/job_artizen-canvas/artifacts/nyi2n85w_651074300_17987449343957189_8356130856163082839_n.jpg',
+      '/images/slide2.jpg',
     eyebrow: 'Art Is More Fun Together',
     lines: ['Paint. Laugh.', 'Remember.'],
     sub: 'Bring your friends, your partner, or just yourself. Every visit becomes a memory worth keeping.',
@@ -41,7 +41,7 @@ const slides = [
   {
     id: 4,
     image:
-      'https://customer-assets.emergentagent.com/job_artizen-canvas/artifacts/5jvjr4jl_650305993_17987449382957189_7978341390699930889_n.jpg',
+      '/images/slide3.jpg',
     eyebrow: 'Find Your Creative Rhythm',
     lines: ['Unplug.', 'Paint. Be Present.'],
     sub: 'Step away from the screen and into a world of colour. Artizen is your creative sanctuary in Pune.',
