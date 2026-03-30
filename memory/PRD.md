@@ -9,10 +9,10 @@ A premium, immersive marketing website for **Artizen Café**, an art café in Pu
 
 ### Tech Stack
 - **Frontend**: React (CRA + Tailwind CSS)
-- **Backend**: FastAPI (minimal, just health-check)
-- **Database**: MongoDB (not used for this marketing site)
+- **Backend**: FastAPI (minimal, health-check only)
 - **Fonts**: DM Serif Display + Poppins (Google Fonts)
 - **Icons**: Lucide React
+- **Images**: Real café photos from GitHub repo + customer uploads
 
 ### Key Files
 ```
@@ -20,81 +20,67 @@ A premium, immersive marketing website for **Artizen Café**, an art café in Pu
 ├── App.js                      — Main app, scroll-reveal IntersectionObserver
 ├── App.css                     — Global styles, animations, CSS variables
 ├── components/
-│   ├── Navbar.jsx              — Sticky glassmorphism nav, mobile menu
-│   ├── Hero.jsx                — Full-screen hero, tagline, CTA buttons
+│   ├── Navbar.jsx              — Sticky glassmorphism nav, hamburger mobile menu
+│   ├── Hero.jsx                — 4-slide carousel (5.5s auto-advance)
 │   ├── About.jsx               — Brand story, image collage, Eat/Sip/Paint pillars
-│   ├── Experiences.jsx         — Tetris/bento grid, 4 experience cards
+│   ├── Experiences.jsx         — Tetris bento grid + real café photos
 │   ├── Menu.jsx                — 3-column typographic menu (bites/sips/specials)
-│   ├── Gallery.jsx             — 9-image masonry grid
+│   ├── Gallery.jsx             — 18 real images masonry grid (5 uploads + 13 GitHub)
+│   ├── ReelsSection.jsx        — Instagram Reels horizontal scroll (13 reels)
 │   ├── Events.jsx              — 4 event cards with colored accents
-│   ├── Testimonials.jsx        — Auto-rotating carousel, 5 reviews
+│   ├── Testimonials.jsx        — Auto-rotating carousel with customer photos (1:1)
+│   ├── ReadyToPaintBanner.jsx  — Full-width dark CTA banner
 │   ├── Contact.jsx             — Styled map placeholder, contact info cards
 │   └── Footer.jsx              — Dark bg, massive display text, links
 ```
 
 ---
 
-## User Personas
-- Young adults (18–35) in Pune
-- Couples looking for unique date experiences
-- Friend groups for social outings
-- Solo creatives / art enthusiasts
+## Image Sources
+- **5 customer uploads**: Direct artifact URLs (groups, couples, solo sessions)
+- **13 GitHub images**: `https://raw.githubusercontent.com/Priyanka-7350/Artizen-Website/main/`
 
 ---
 
-## Core Requirements (Implemented ✅)
+## Implemented (Phase 1 & 2)
 
-### Sections Implemented
-- [x] Hero — Full-screen immersive with "Eat. Sip. Paint." headline
-- [x] About — Brand story, image collage, Eat/Sip/Paint pillars, floating "Since 2022" badge
-- [x] Experiences — 4 cards: Painting Sessions, Date Night, Friends Outing, Chill Time (tetris bento grid)
-- [x] Menu — Bites & Plates, Café Sips, Artist Specials (with INR prices)
-- [x] Gallery — 9-image masonry grid with hover overlay
-- [x] Events — 4 recurring events (Watercolour Weekend, Canvas Date Night, Art & Brunch, Clay & Coffee)
-- [x] Testimonials — Auto-rotating carousel with 5 reviews, arrows + dot navigation
-- [x] Contact — Styled map placeholder, 4 info cards, social links, "Ready to Paint?" CTA
-- [x] Footer — Dark olive background, large display text, quick links, social icons
+### Sections
+- [x] Hero — 4-slide carousel: "More Than a Café — It's an Experience", real café photos
+- [x] About — Brand story, image collage, Eat/Sip/Paint pillars
+- [x] Experiences — Tetris bento grid with 4 real café photos
+- [x] Menu — Bites & Plates, Café Sips, Artist Specials (INR prices)
+- [x] Gallery — 18 real café images masonry grid
+- [x] Reels — 13 Instagram embed iframes, horizontal scroll, prev/next controls
+- [x] Events — 4 recurring events
+- [x] Testimonials — Auto-carousel, customer 1:1 photos, 5 reviews
+- [x] Ready to Paint Banner — Full-width CTA section
+- [x] Contact — Styled map, contact info, social links
+- [x] Footer — Dark display text, links, social icons
 
-### Design System
-- Color palette: Cream #F9F6F0, Terracotta #E07A5F, Sage #A3B18A, Rose #E5B8B7, Golden #F4D06F
-- Typography: DM Serif Display (headings) + Poppins (body)
-- Animations: CSS scroll-reveal (IntersectionObserver), hero entrance, float animation
-- Mobile responsive with hamburger menu
-
----
-
-## What's Been Implemented
-- **2026-03**: Full MVP site launched with all 9 sections + footer
-- IntersectionObserver-based scroll animations
-- Mobile-first responsive layout
-- Masonry gallery
-- Testimonials auto-carousel (5.5s interval)
-- Styled decorative map placeholder
+### Design
+- Emergent watermark removed (Pro plan)
+- Mobile responsive: hamburger menu at <1024px
+- Real Artizen Café photos throughout (not stock images)
 
 ---
 
 ## Prioritized Backlog
 
-### P0 (Critical — None Currently)
-- None
-
-### P1 (Important — Next Phase)
-- [ ] Online booking/reservation form with backend (currently "Book a Session" links to contact)
-- [ ] Real Google Maps integration for contact section
-- [ ] Actual Instagram gallery feed integration
-- [ ] Contact form with email notifications
+### P1 (Next Phase)
+- [ ] Online booking form with backend (name/date/session-type → DB + email)
+- [ ] Real Google Maps embed
+- [ ] WhatsApp chat widget (high-conversion for local experiences)
+- [ ] Contact form with email notifications (Resend / SendGrid)
 
 ### P2 (Nice to Have)
 - [ ] Blog/Articles section ("Art Tips & Café Stories")
-- [ ] WhatsApp chat widget for quick inquiries
 - [ ] Photo lightbox for gallery images
-- [ ] Custom domain setup (artizencafe.in)
+- [ ] Custom domain (artizencafe.in)
 - [ ] SEO meta tags, Open Graph images
+- [ ] Instagram live feed auto-update
 
 ---
 
-## Next Tasks
-1. Add booking form (P1) — simple name/date/session-type form that saves to MongoDB and sends email
-2. Integrate real Google Maps embed
-3. Add Instagram feed API for live gallery
-4. Deploy to custom domain
+## Test Credentials
+No authentication - public marketing website.
+URL: https://artizen-canvas.preview.emergentagent.com
